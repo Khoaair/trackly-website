@@ -10,13 +10,6 @@ const CartButtons = () => {
   const { closeSidebar } = useProductsContext();
   return (
     <Wrapper className='cart-btn-wrapper'>
-      <Link to='/cart' className='cart-btn'>
-        Cart
-        <span className='cart-container' onClick={closeSidebar}>
-          <FaShoppingCart />
-          <span className='cart-value'>12</span>
-        </span>
-      </Link>
       <button className='auth-btn' type='button' onClick={closeSidebar}>
         Login <FaUserPlus />
       </button>

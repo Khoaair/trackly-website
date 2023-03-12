@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { PageHero } from '../components';
-import aboutImg from '../assets/hero-bcg.jpeg';
+import aboutImg from '../assets/hero.jpg';
 
 const AboutPage = () => {
   return (
@@ -14,13 +14,13 @@ const AboutPage = () => {
             <h2>our story</h2>
             <div className='underline'></div>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
-              numquam eaque voluptate fugiat blanditiis doloremque officiis vero
-              corporis cumque tempora facere assumenda veritatis nam, labore
-              unde dolore. At provident iusto repellat dolores saepe soluta
-              corporis repellendus unde incidunt eum adipisci enim suscipit
-              molestias voluptatibus consectetur, possimus, debitis aspernatur,
-              magnam pariatur.
+              This is the graduation thesis of students majoring in electronics
+              and telecommunications at the Ho Chi Minh City University of
+              Transport, specializing in automation and mechanical engineering.
+              The project was completed with the participation of students Tran
+              Cong Dang Khoa, Ho Quoc Ky, and Nguyen Thanh Duong. The success of
+              the project was due to the dedicated guidance and support of the
+              supervisor, Mr. Pham Thanh Trung.
             </p>
           </div>
         </article>

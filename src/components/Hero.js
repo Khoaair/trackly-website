@@ -1,24 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import heroBcg from '../assets/hero-bcg.jpeg';
-import heroBcg2 from '../assets/hero-bcg-2.jpeg';
+import heroBcg from '../assets/HeroBcg.jpg';
+import heroBcg2 from '../assets/HeroBcg2.jpg';
 
 const Hero = () => {
   return (
     <Wrapper className='section-center'>
       <article className='content'>
         <h1>
-          design your <br />
-          comfort zone
+          System for <br />
+          clothing recognition and inspection
         </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dicta
-          doloribus vel architecto eveniet, autem tempore repudiandae sunt iure
-          error!
+          Quick and cost-effective identification of workers wearing protective
+          clothing, which helps save time and labor compared to traditional
+          methods. It is then combined with attendance tracking applications to
+          provide more stringent control.
         </p>
-        <Link to='/products' className='btn hero-btn'>
-          shop now
+        <Link to='/dashboard' className='btn hero-btn'>
+          try it now
         </Link>
       </article>
       <article className='img-container'>
