@@ -1,10 +1,19 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Filters, ProductList, Sort, PageHero } from '../components'
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import { Filters, ProductList, Sort, PageHero } from '../components';
+import dbRef from '../utils/FirebaseData';
 
 const ProductsPage = () => {
-  return <h4>products page</h4>
-}
+  const [data, setData] = useState({});
+  console.log(data);
+
+  useEffect(() => {
+    dbRef.on('value', snapshot => {
+      setData(snapshot.val());
+    });
+  }, []);
+  return <h4>products page</h4>;
+};
 
 const Wrapper = styled.div`
   .products {
@@ -17,6 +26,6 @@ const Wrapper = styled.div`
       grid-template-columns: 200px 1fr;
     }
   }
-`
+`;
 
-export default ProductsPage
+export default ProductsPage;
