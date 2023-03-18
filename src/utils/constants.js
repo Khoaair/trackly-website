@@ -42,7 +42,7 @@ export const members = [
     text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate debitis impedit obcaecati, veritatis fugiat aperiam.',
   },
   {
-    id: 1,
+    id: 3,
     name: 'Thanh Duong',
     job: 'software engineer',
     image:

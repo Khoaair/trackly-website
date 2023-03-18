@@ -1,18 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Filters, ProductList, Sort, PageHero } from '../components';
-import dbRef from '../utils/FirebaseData';
+import { Filters, ProductList, PageHero, UserTable } from '../components';
+import { database } from '../utils/FirebaseData';
+import { ref, onValue } from 'firebase/database';
 
 const ProductsPage = () => {
-  const [data, setData] = useState({});
-  console.log(data);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    dbRef.on('value', snapshot => {
+    const databaseRef = ref(database);
+    onValue(databaseRef, snapshot => {
       setData(snapshot.val());
+      setLoading(true);
     });
   }, []);
-  return <h4>products page</h4>;
+  return (
+    <Wrapper>
+      <PageHero title='dashboard' />
+      <UserTable data={data} loading={loading} />
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.div`
