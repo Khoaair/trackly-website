@@ -19,7 +19,7 @@ const Hero = () => {
           provide more stringent control.
         </p>
         <Link to='/dashboard' className='btn hero-btn'>
-          try it now
+          go to dashboard
         </Link>
       </article>
       <article className='img-container'>
