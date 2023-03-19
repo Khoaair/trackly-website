@@ -13,6 +13,7 @@ import {
 import { useProductsContext } from './products_context';
 
 const initialState = {
+  working_data: [],
   sort: 'KyHQ',
 };
 
