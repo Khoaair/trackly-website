@@ -30,7 +30,7 @@ function UserTable({ data, loading }) {
     sortedObj[key] = data[key];
   }
   ////////////////////////////////////////////////////////////////////////////////
-
+  // Handle Event
   function handleOnChange(e) {
     setUser(e.target.value);
     setDisplayTable(false);
@@ -57,7 +57,7 @@ function UserTable({ data, loading }) {
 
   ////////////////////////////////////////////////////////////////////////////////
   // function
-  const converHour = value => {
+  const convertHour = value => {
     const hours = Math.floor(value);
     const minutes = Math.round((value - hours) * 60);
     const time =
@@ -66,8 +66,30 @@ function UserTable({ data, loading }) {
       minutes.toString().padStart(2, '0');
     return time;
   };
+
+  const calcEntry = value => {
+    if (value === 0) {
+      return 0;
+    } else {
+      if (value % 2 !== 0) {
+        return Math.round(value / 2);
+      }
+      if (value % 2 === 0) {
+        return Math.floor(value / 2);
+      }
+    }
+  };
+  const calcExit = value => {
+    if (value === 0) {
+      return 0;
+    } else {
+      return Math.floor(value / 2);
+    }
+  };
   ////////////////////////////////////////////////////////////////////////////////
 
+  ////////////////////////////////////////////////////////////////////////////////
+  // Render components
   if (loading) {
     return (
       <div className='section-center section page'>
@@ -134,29 +156,39 @@ function UserTable({ data, loading }) {
                 {Object.values(userData).map((data, index) => {
                   const user = Object.keys(data)[0];
                   if (user === 'M6RSfVNLiUPu44jlGOoEH5P5yql2') {
-                    console.log('KyHQ');
                     return (
                       <tr key={index}>
                         <td>{`${data.M6RSfVNLiUPu44jlGOoEH5P5yql2.firstHourIn}:${data.M6RSfVNLiUPu44jlGOoEH5P5yql2.firstMinIn}`}</td>
                         <td>{`${data.M6RSfVNLiUPu44jlGOoEH5P5yql2.lastHourOut}:${data.M6RSfVNLiUPu44jlGOoEH5P5yql2.lastMinOut}`}</td>
                         <td>
-                          {converHour(
+                          {convertHour(
                             data.M6RSfVNLiUPu44jlGOoEH5P5yql2.officeTime
                           )}
+                        </td>
+                        <td>
+                          {calcEntry(data.M6RSfVNLiUPu44jlGOoEH5P5yql2.Count)}
+                        </td>
+                        <td>
+                          {calcExit(data.M6RSfVNLiUPu44jlGOoEH5P5yql2.Count)}
                         </td>
                       </tr>
                     );
                   }
                   if (user === 'zqrU6aemLKgrhOzHmRe4d38BD633') {
-                    console.log('KhoaTCD');
                     return (
                       <tr key={index}>
                         <td>{`${data.zqrU6aemLKgrhOzHmRe4d38BD633.firstHourIn}:${data.zqrU6aemLKgrhOzHmRe4d38BD633.firstMinIn}`}</td>
                         <td>{`${data.zqrU6aemLKgrhOzHmRe4d38BD633.lastHourOut}:${data.zqrU6aemLKgrhOzHmRe4d38BD633.lastMinOut}`}</td>
                         <td>
-                          {converHour(
+                          {convertHour(
                             data.zqrU6aemLKgrhOzHmRe4d38BD633.officeTime
                           )}
+                        </td>
+                        <td>
+                          {calcEntry(data.zqrU6aemLKgrhOzHmRe4d38BD633.Count)}
+                        </td>
+                        <td>
+                          {calcExit(data.zqrU6aemLKgrhOzHmRe4d38BD633.Count)}
                         </td>
                       </tr>
                     );
