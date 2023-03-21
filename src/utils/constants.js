@@ -1,6 +1,9 @@
 import React from 'react';
 import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi';
 import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin } from 'react-icons/bs';
+import khoaProfile from '../assets/khoa_profile.jpg';
+import kyProfile from '../assets/ky_profile.jpg';
+import duongProfile from '../assets/duong_profile.jpg';
 export const links = [
   {
     id: 1,
@@ -29,25 +32,22 @@ export const members = [
     id: 1,
     name: 'Dang Khoa',
     job: 'software engineer',
-    image:
-      'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate debitis impedit obcaecati, veritatis fugiat aperiam.',
+    image: 'https://live.staticflickr.com/65535/52762109700_7fa95a94a5_b.jpg',
+    text: 'Life is not measured by the number of breaths we take, but by the moments that take our breath away. Embrace each moment and live fully.',
   },
   {
     id: 2,
     name: 'Quoc Ky',
     job: 'software engineer',
-    image:
-      'https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate debitis impedit obcaecati, veritatis fugiat aperiam.',
+    image: 'https://live.staticflickr.com/65535/52761675061_281a00d110_b.jpg',
+    text: 'Life is a precious journey, filled with ups and downs. The key is to embrace the ride and enjoy every twist and turn along the way.',
   },
   {
     id: 3,
     name: 'Thanh Duong',
     job: 'software engineer',
-    image:
-      'https://images.pexels.com/photos/716411/pexels-photo-716411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate debitis impedit obcaecati, veritatis fugiat aperiam.',
+    image: 'https://live.staticflickr.com/65535/52761946364_e748eb7625_b.jpg',
+    text: `Life is a canvas, and we are the artists. It's up to us to paint a beautiful picture with every stroke of the brush and create a masterpiece.`,
   },
 ];
 
